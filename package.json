@@ -4,14 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app/bac",
+    "start": "nodemon --watch app --watch public --exec babel-node app/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chaupi Ghambi",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "mongoose": "^8.0.3",
     "nodemon": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.7",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.7"
   }
 }
