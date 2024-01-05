@@ -1,0 +1,49 @@
+.dashboard-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    /* border: 1px solid white; */
+}
+
+.item{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 17%;
+    height: 12rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* border: 1px solid orange; */
+}
+
+.item img{
+    width: 13rem;
+}
+
+.item:hover > img{
+    width: 14rem;
+    /* transition: 0.2s; */
+}
+
+.item h2{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'bahnschrift';
+    height: 2.3rem;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: white ;
+    /* border: 1px solid red; */
+}
+

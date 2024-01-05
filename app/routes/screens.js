@@ -9,4 +9,8 @@ route.get("/home", (req, res) => {
     res.render("index");
 });
 
+route.get("/teams", (req, res) => {
+    res.render("teams");
+});
+
 export default route;

@@ -86,7 +86,8 @@ body{
 }
 
 .side-bar-option:hover{
-    font-size: 2.1rem;
+    color: rgb(254,119,82);
+    font-size: 2.1rem;    
 }
 
 /* MAIN */
@@ -114,48 +115,9 @@ main{
 }
 
 /* DASHBOARD */
-.dashboard-items{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 2rem;
-    column-gap: 3rem;
-    row-gap: 3rem;
-    /* border: 1px solid white; */
-    
-}
+/* ^CHANGES BASED ON SCREEN */
 
-.dashboard-items .item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 17%;
-    height: 10rem;
-    padding: 1.5rem;
-    column-gap: 1rem;
-    row-gap: 1rem;
-    font-size: 1.5rem;
-    background-color: rgb(19, 21, 36);
-    border-radius: 1rem;
-    /* border: 1px solid orange; */
-}
-
-.item-header{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.item img{
-    width: 2rem;
-}
-
-.item:hover{
-    color: rgb(254,119,82);
-    cursor: pointer;
-    width: 19%;
-}
-
+/* FOOTER */
 footer{
     grid-area: footer;
     display: flex;
