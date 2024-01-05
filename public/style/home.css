@@ -38,4 +38,5 @@
     color: rgb(254,119,82);
     cursor: pointer;
     width: 19%;
+    transition: 0.4s;
 }
