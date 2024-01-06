@@ -13,4 +13,8 @@ route.get("/teams", (req, res) => {
     res.render("teams");
 });
 
+route.get("/players", (req, res) => {
+    res.render("players");
+});
+
 export default route;

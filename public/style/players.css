@@ -1,0 +1,82 @@
+main{
+    row-gap: 3rem !important;
+}
+
+.search-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: center;
+    /* border: 1px solid purple; */
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    width: 44rem;
+    /* padding: 1rem; */
+    /* border: 1px solid red; */
+}
+
+.search-bar input{
+    padding: 1rem;
+    width: 100%;
+    font-family: 'Trebuchet MS';
+    background-color: rgb(230, 230, 238);
+    border: 0;
+    outline: 0;
+    border-radius: 0.5rem;
+}
+
+.player-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    /* border: 1px solid black; */
+}
+
+.player-list .player{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    background-color: rgb(19, 21, 36);
+    padding-left: 1rem;
+    width: 44rem;
+    height: 7rem;
+    transition: 0.3s;
+    column-gap: 3rem;
+    align-items: center;
+    border-radius: 0.6rem;
+    /* border: 1px solid white; */
+}
+
+.player-list img{
+    width: 4rem;
+    /* height: 1rem; */
+}
+
+.dashboard-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    /* border: 1px solid white; */
+    
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 17%;
+    height: 10rem;
+    padding: 1.5rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    font-size: 1.5rem;
+    background-color: rgb(19, 21, 36);
+    border-radius: 1rem;
+    /* border: 1px solid orange; */
+}

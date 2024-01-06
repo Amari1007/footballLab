@@ -23,7 +23,14 @@ app.use("/i", screenRoutes);
 
 // Test route
 app.get("/app/test", (req, res) => {
-    res.json({message:"success"});
+    res.json({players: 
+        [
+            {name: "A. Mac-Allister", team: "Brighton"},
+            {name: "M. Caicedo", team: "Brighton"},
+            {name: "P. Estupinan", team: "Brighton"},
+        ],
+        success: true,
+    });
 });
 
 // 404 ERROR

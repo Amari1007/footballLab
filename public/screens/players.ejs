@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author", content="Chaupi Ghambi">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"
+    integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/teams.css">
+    <link rel="stylesheet" href="../style/players.css">
     <link rel="icon" href="../res//icons/soccer-pitch.png">
-    <title>FootballLab-Teams</title>
+    <title>FootballLab-Players</title>
 </head>
 <body>
     <div class="grid-container">
@@ -31,14 +34,18 @@
             </header>
     
             <main>
+                <div class="search-box">
+                    <div class="search-bar">
+                        <input type="search" placeholder="Search..." id="search">
+                    </div>
+
+                    <div class="player-list">
+                        <!-- Stuff will dynamically appear here -->
+                    </div>
+                </div>
                 <div class="dashboard-items">
                     <div class="item">
-                        <img src="../res/images/teams/football-club-color.png">
-                        <h2>Arsenal</h2>
-                    </div>
-                    <div class="item">
-                        <img src="../res//images/teams/liverpool.png">
-                        <h2>Liverpool</h2>
+                        <h2>Players</h2>
                     </div>
                 </div>
             </main>
