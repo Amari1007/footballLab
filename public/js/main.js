@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const playerList = document.getElementsByClassName("player-list")[0];
 
     searchInput.addEventListener("keyup", async () => {
-        if(searchInput.value != "" ){
+        if(searchInput.value != "" || searchInput.value == undefined ){
             try {
                 const res = await axios.get("/app/test")
                 if(res.status == 200){

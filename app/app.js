@@ -1,6 +1,7 @@
 import express from 'express'
 import ejs from 'ejs';
 import route from './routes/screens';
+import dotenv from 'dotenv';
 
 const app = express();
 const PORT = 3333;
@@ -23,14 +24,7 @@ app.use("/i", screenRoutes);
 
 // Test route
 app.get("/app/test", (req, res) => {
-    res.json({players: 
-        [
-            {name: "A. Mac-Allister", team: "Brighton"},
-            {name: "M. Caicedo", team: "Brighton"},
-            {name: "P. Estupinan", team: "Brighton"},
-        ],
-        success: true,
-    });
+    res.json({message:"success", success: true});
 });
 
 // 404 ERROR
@@ -40,5 +34,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-    console.log("football lab bac on port:", PORT)
+    console.log("football lab back on port:", PORT)
 });
