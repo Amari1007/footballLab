@@ -3,30 +3,35 @@ window.addEventListener("DOMContentLoaded", () => {
     const playerList = document.getElementsByClassName("player-list")[0];
 
     searchInput.addEventListener("keyup", async () => {
-        if(searchInput.value != "" || searchInput.value == undefined ){
+        const input = searchInput.value.toString().trim();
+        if(input != "" || input == undefined ){
             try {
-                const res = await axios.get("/app/test")
-                if(res.status == 200){
-                    const players = res.data.players;
-    
-                    playerList.innerHTML = players.map( player =>`
+                const res = await axios.get(`/api/search_player/${input}`);
+                const data = res.data.results;
+                
+                if(data.length > 0 ){
+                    playerList.innerHTML = data.map((player) => `
                         <div class='player'>
-                            <img src="../res/icons/football-player.png" alt="playerName.png" onerror="">
-                            <h3>${player.name}</h3>
-                            <h3>${player.team}</h3>
-                        </div>
+                            <img src='../res/icons/football-player.png' alt='${player.name}.png'>
+                            <h2 class='player-name' data=''>
+                                ${player.name}
+                            </h2>
+                            <h2 class='player-team' data=''>
+                                ${player.team}
+                            </h2>                        
+                        </div>                    
                     `).join("");
-                    
+                    // console.log(data);
                 }else{
-                    throw new Error();
+                    throw new Error("Player not found");
                 }
-                console.log(res);            
+
             } catch (error) {
-                console.log(error);
+                // console.log(error);
                 playerList.innerHTML = `
                     <div class='player'>
                         <h2>
-                            <code>Player not found</code>
+                            <code>${error}</code>
                         </h2>
                     </div>
                 `;
