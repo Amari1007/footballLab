@@ -17,4 +17,9 @@ route.get("/players", (req, res) => {
     res.render("players");
 });
 
+route.get("/player-view", (req, res) => {
+    const playerId = req.params.id;
+    res.render("player-view");
+});
+
 export default route;

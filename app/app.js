@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URL,  {
 app.use(express.static("public"));
 // Configure ejs as the view engine
 app.set('view engine', 'ejs');
-app.set('views', './public/screens/');
+app.set('views', 'screens');
 
 // Log requests
 app.use((req, res, next)=>{
