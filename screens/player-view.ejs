@@ -7,22 +7,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"
     integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="../style/main.css">
-    <!-- <link rel="stylesheet" href="../style/player-view.css"> -->
-    <link rel="icon" href="../res//icons/soccer-pitch.png">
-    <title>document</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/player-view.css">
+    <link rel="icon" href="/res/icons/soccer-pitch.png">
+    <title><%=data.name%> | Player Info</title>
 </head>
 <body>
     <div class="grid-container">
         <div class="grid-side-bar">
             <ul class="side-bar-header">
-                <li class="side-bar-brand" onclick="location.assign('/i/')"><img src="../res/icons/soccer-pitch.png"></img>FootballLab</li>
+                <li class="side-bar-brand" onclick="location.assign('/i/')"><img src="/res/icons/soccer-pitch.png"></img>FootballLab</li>
             </ul>
             <ul class="side-bar-list">
-                <li class="side-bar-option"><img src="../res/icons/tournament-blue.png"></img>Tournaments</li>
-                <li class="side-bar-option" onclick="location.assign('/i/teams')"><img src="../res/icons/team-yellow.png"></img>Teams</li>
-                <li class="side-bar-option" onclick="location.assign('/i/players')"><img src="../res/icons/soccer-player-purple.png"></img>Players</li>
-                <li class="side-bar-option"><img src="../res/icons/trend-red.png"></img>Trends</li>
+                <li class="side-bar-option"><img src="/res/icons/tournament-blue.png"></img>Tournaments</li>
+                <li class="side-bar-option" onclick="location.assign('/i/teams')"><img src="/res/icons/team-yellow.png"></img>Teams</li>
+                <li class="side-bar-option" onclick="location.assign('/i/players')"><img src="/res/icons/soccer-player-purple.png"></img>Players</li>
+                <li class="side-bar-option"><img src="/res/icons/trend-red.png"></img>Trends</li>
             </ul>
         </div>
 
@@ -34,15 +34,34 @@
             </header>
     
             <main>
-                <div>
-                    <h3>Player Info</h3>
+                <div class="card">
+                    <img src='/res/icons/football-player.png' alt="" width="100">
+                    <h2><%= data.name %></h2>
+                </div>
+                <div class="card" data-id='<%= data.teamId %>'>
+                    <img src='/res/icons/football-team-generic.png' alt="" width="100">
+                    <h2><%= data.team %></h2>
+                </div>
+                <div class="card">
+                    <h2>Age (dob)</h2>
+                    <h2>Height (cm)</h2>
+                    <h2>Nationality</h2>
+                </div>
+                <div class="card">
+                    <h2>Shots</h2>
+                    <h2>Goals</h2>
+                    <h2>Total xg</h2>
+                    <h2>xg per shot</h2>
+                    <h2>Conversion</h2>
+                    <h2>xg per match</h2>
+                    <h2>xg per 90</h2>
                 </div>
             </main>
 
             <footer>
                 <div class="footer-header">
                     <ul class="footer-header-items">
-                        <li class="footer-brand"><img src="../res/icons/soccer-pitch.png"></img>FootballLab </li>
+                        <li class="footer-brand"><img src="/res/icons/soccer-pitch.png"></img>FootballLab </li>
                         <li>Copyright<sup>&copy;</sup></li>
                         <li>2024 - ?</li>
                     </ul>
@@ -53,6 +72,6 @@
     </div>    
 </body>
 
-<script defer src="../js/main.js"></script>
+<script defer src="/js/main.js"></script>
 
 </html>

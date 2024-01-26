@@ -1,14 +1,13 @@
-import mongoose, {Mongoose, mongo} from "mongoose";
+import mongoose from "mongoose";
 import express from 'express'
 import ejs from 'ejs';
 import apiRoute from "./routes/apis";
 import route from './routes/screens';
 import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 const PORT = 3333;
-
-dotenv.config()
 
 mongoose.connect(process.env.MONGODB_URL,  {
     useNewUrlParser: true,

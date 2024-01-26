@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     Array.from(player).map((element) =>
                         element.addEventListener("click", ()=>{
                             const playerId = element.dataset.id;
-                            location.assign(`/i/player-view`);
+                            location.assign(`/i/player-view/${playerId}`);
                         })
                     );
 
