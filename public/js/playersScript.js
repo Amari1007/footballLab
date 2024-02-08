@@ -1,4 +1,23 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const result = await fetch("/api/getPlayerClicks");
+        const data = await result.json();
+        const element = document.getElementsByClassName("dashboard-items")[0];
+        element.innerHTML = 
+            `<h2>Most viewed</h2>` +
+            data.data.map((ele, ind, arr) => {
+                return `
+                    <div class="item" data-id="${ele.id}" onclick="location.assign('/i/player-view/${ele.id}')">
+                        <h2>${ele.name}</h2>
+                    </div>
+                `
+            }).join("");
+
+        console.log(data);
+    } catch (error) {
+        console.log("content unavailable:", error);
+    }    
+
     const searchInput = document.getElementById("search");
     const playerList = document.getElementsByClassName("player-list")[0];
 

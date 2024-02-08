@@ -1,5 +1,6 @@
 import express from 'express';
 import playersModel from '../models/playersModel';
+import getPlayerClicks from '../util/getPlayerClicks';
 const apiRoute = express.Router();
 
 apiRoute.get("/search_player/:name", async (req, res) => {
@@ -23,6 +24,12 @@ apiRoute.get("/search_player/:name", async (req, res) => {
     } catch (err) {
         res.status(500).json({message: `DB internal error ${err}`, success: false});
     }
+});
+
+apiRoute.get("/getPlayerClicks", async (req, res) => {
+    const result = await getPlayerClicks();
+    // console.log(result);
+    res.json({data: result.message});
 });
 
 export default apiRoute;

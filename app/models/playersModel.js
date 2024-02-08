@@ -17,6 +17,14 @@ const players = new mongoose.Schema({
     team: {
         type: String,
     },
+
+    clicks: {
+        type: Number,
+    },
+
+    pic_location: {
+        type: String,
+    },
 });
 
 const playersModel = new mongoose.model("players", players);
